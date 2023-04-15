@@ -54,6 +54,8 @@ main{
     max-width: 110rem;
 
     font-size: var(--fs-body);
+
+    margin: 0 auto;
 }
 
 main p{
@@ -80,9 +82,22 @@ main p{
 }
 
 .card{
-    width: 32rem;
     position: relative;
 }
+
+.card img{
+    width: 32rem;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.img_01{
+    height: 25rem;
+}
+.img_02{
+    height: 45rem;
+}
+
 
 .card h2{
 
