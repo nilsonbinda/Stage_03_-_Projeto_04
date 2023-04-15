@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    --ff-tittle: 'Staatliches', 'sans serif';
+    --ff-text: 'Palanquin', 'sans serif';
+    --ff-card: 'Staatliches', 'sans serif';
+
+    font-size: 62.5%;
+
+    --fs-body: 1.6rem;
+    --fs-card: 2rem;
+
+}
+
+header{
+    min-width: 38.4rem;
+    display: flex;
+    flex-direction: column;
+
+    background: #8E9AAF;
+}
+
+header img{
+    height: 137px;
+    margin: 32px auto 32px;
+
+    filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
+}
+
+header h1{
+    font-family: var(--ff-tittle);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 34px;
+    letter-spacing: 0.05em;
+    color: #FFFFFF;
+
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    background: #CBC0D3;
+
+    padding: 8px 0 7px;
+    text-align: center;
+    margin-bottom: 29px;
+}
+
+main{
+    min-width: 38.4rem;
+    max-width: 110rem;
+
+    font-size: var(--fs-body);
+}
+
+main p{
+    min-width: 32rem;
+
+    font-family: var(--ff-text);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    color: #23053A;
+    text-align: center;
+
+    margin: 1.4rem 3.6rem 6.3rem;
+}
+
+.wrapper{
+    min-width: 38.4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.card{
+    width: 32rem;
+    position: relative;
+}
+
+.card h2{
+
+    font-family: var(--ff-card);
+    font-style: normal;
+    font-weight: 400;
+    color: #4A4E69;
+    font-size: var(--fs-card);
+    line-height: 3.4rem;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: #FEEAFA;
+
+    width: fit-content;
+    padding: 0 2.4rem;
+    margin: 1.6rem;
+
+    border-radius: 2rem;
+}
