@@ -30,6 +30,8 @@ header img{
     margin: 32px auto 32px;
 
     filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
+
+    animation: downtop 300ms 200ms backwards;
 }
 
 header h1{
@@ -47,6 +49,8 @@ header h1{
     padding: 8px 0 7px;
     text-align: center;
     margin-bottom: 29px;
+
+    animation: downtop 300ms 200ms backwards;
 }
 
 main{
@@ -83,6 +87,15 @@ main p{
 
 .card{
     position: relative;
+
+    transition: all 200ms;
+
+    animation: downtop 300ms 200ms backwards;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 .card img{
@@ -120,6 +133,8 @@ main p{
     margin: 1.6rem;
 
     border-radius: 2rem;
+
+    animation: topdown 1600ms 200ms backwards;
 }
 
 @media (min-width:700px) {
@@ -132,4 +147,33 @@ main p{
         height: 45rem;
     }
 
+}
+
+@keyframes topdown {
+
+    0%{
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+
+@keyframes downtop {
+
+    0%{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
 }
