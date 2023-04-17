@@ -9,16 +9,25 @@
     --ff-tittle: 'Staatliches', 'sans serif';
     --ff-text: 'Palanquin', 'sans serif';
     --ff-card: 'Staatliches', 'sans serif';
+    --ff-footer: 'Open Sans', sans-serif;
 
     font-size: 62.5%;
 
     --fs-body: 1.6rem;
     --fs-card: 2rem;
 
+    --fc-text:#23053A;
+
+
+}
+
+.page{
+    display: grid;
+
+    margin: 0 auto;
 }
 
 header{
-    min-width: 38.4rem;
     display: flex;
     flex-direction: column;
 
@@ -55,15 +64,10 @@ header h1{
 
 main{
     min-width: 38.4rem;
-    max-width: 110rem;
-
     font-size: var(--fs-body);
-
-    margin: 0 auto;
-    padding-bottom: 3.2rem;
 }
 
-main p{
+.cabecalho p{
     min-width: 32rem;
 
     font-family: var(--ff-text);
@@ -71,7 +75,7 @@ main p{
     font-weight: 400;
     font-size: 1.4rem;
     line-height: 2rem;
-    color: #23053A;
+    color: var(--fc-text);
     text-align: center;
 
     margin: 1.4rem 3.6rem 6.3rem;
@@ -138,6 +142,27 @@ main p{
     animation: topdown 1600ms 200ms backwards;
 }
 
+footer{
+    text-align: center;
+    padding: 5rem 0;
+
+    font-family: var(--ff-footer);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: #4A4E69;
+}
+
+footer a{
+    text-decoration: none;
+    font-weight: 700;
+}
+
+footer a:hover{
+    opacity: 0.8;
+}
+
 @media (min-width:700px) {
     
     .wrapper{
@@ -148,6 +173,75 @@ main p{
         height: 45rem;
     }
 
+}
+
+@media (min-width: 900px) {
+
+    :root{
+        --ff-text: 'Roboto', sans-serif;
+        --fc-text:#FFFFFF;
+    }
+
+    .page{
+        grid-template-areas: "A B";
+        grid-template-columns: 37.7rem 106.3rem ;
+        justify-items: start;
+    } 
+    .cabecalho{
+        width: 37.7rem;
+        background: #8E9AAF;
+    }
+    
+    .cabecalho p{
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+        width: 27.5rem;
+        min-width: auto;
+    }
+    
+    .wrapper{
+        grid-template-columns: auto;
+        grid-template-areas: 
+        "img1 img3 img5"
+        "img2 img3 img6"
+        "img2 img4 img6";
+        grid-template-rows: 15rem 17.5rem 17.5rem;
+    }
+
+    .wrapper div:nth-child(1){
+        grid-area: img1;
+    }
+    .wrapper div:nth-child(2){
+        grid-area: img2;
+    }
+    .wrapper div:nth-child(3){
+        grid-area: img3;
+    }
+    .wrapper div:nth-child(4){
+        grid-area: img4;
+    }
+    .wrapper div:nth-child(5){
+        grid-area: img5;
+    }
+    .wrapper div:nth-child(6){
+        grid-area: img6;
+    }
+
+    .card img{
+        width: 22rem;
+        min-width: auto;
+        height: 100%;
+    }
+
+    main{
+        padding:6.3rem 0 0 6.6rem;
+        max-width: 106.3rem;
+        margin:none;
+    }
+
+    .card h2{
+        display: none;
+    }
 }
 
 @keyframes topdown {
