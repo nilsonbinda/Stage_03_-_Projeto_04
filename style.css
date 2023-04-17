@@ -75,9 +75,9 @@ main p{
 .wrapper{
     min-width: 38.4rem;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display:grid;
+    justify-content: center;
+    padding: 0 3.2rem;
     gap: 3.2rem;
 }
 
@@ -86,7 +86,8 @@ main p{
 }
 
 .card img{
-    width: 32rem;
+    width: 100%;
+    min-width: 32rem;
     object-fit: cover;
     border-radius: 20px;
 }
@@ -119,4 +120,16 @@ main p{
     margin: 1.6rem;
 
     border-radius: 2rem;
+}
+
+@media (min-width:700px) {
+    
+    .wrapper{
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    .img_02, .img_01{
+        height: 45rem;
+    }
+
 }
